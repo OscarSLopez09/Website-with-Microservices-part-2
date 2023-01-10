@@ -23,7 +23,7 @@ On the left side of the VPC dashboard select Route Tables.
 * VPC: Dev VPC 
 * Click create Route Table. 
 
-<img src="https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ng01.PNG?raw=true" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ng01.PNG?raw=true)
 
  Private RT AZ1 is created. Now I need to configure the routes. 
 
@@ -31,14 +31,14 @@ On the left side of the VPC dashboard select Route Tables.
 * Add route: 0.0.0.0/0 - Target: Nat Gateway AZ1 
 * Save the changes.
 
-<img src="https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ng02.PNG?raw=true" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ng02.PNG?raw=true)
 
 I need to create a Subnet association: 
 * Select Subnet association – Edit subnet association. 
 * Select Private App Subnet AZ1, Private Data Subnet AZ1 
 * Save association 
 
-<img src="https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ng03.PNG?raw=true" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ng03.PNG?raw=true)
  
 ## Second Nat Gateway: 
 
@@ -65,13 +65,11 @@ After Route table: Private RT AZ2 is created I need to configure the routes.
 * Add route: 0.0.0.0/0 - Target: Nat Gateway AZ2  
 * Save the changes. 
 
-<img src="https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ng06.PNG?raw=true" height="70%" width="70%" alt="Disk Sanitization Steps"/>
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ng06.PNG?raw=true)
 
 I need to create a Subnet association: 
 * Select Subnet association – Edit subnet association. 
 * Select Private App Subnet AZ2, Private Data Subnet AZ2 
 * Save association 
- 
-<img src="https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ng07.PNG?raw=true" height="70%" width="70%" alt="Disk Sanitization Steps"/>
 
-
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ng07.PNG?raw=true)
