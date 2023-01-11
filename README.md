@@ -106,5 +106,31 @@ Second security group:
 * Select create Security group. 
 
 ![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/sg2.PNG?raw=true)
+
+##
+
+Application Load Balancer operates at the request level (layer 7), routing traffic to targets (EC2 instances, containers, IP addresses, and Lambda functions) based on the content of the request.   
+
+##
+
+To create a load balancer, go to the EC2 Dashboard and on the left side look for Load Balancer tab and select it. 
+
+* Application load balancer: create 
+* Load balancer name: Dev-ALB 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/alb.PNG?raw=true)
+
+* Network mapping – VPC: Dev VPC 
+* Availability zone: US-East-1A subnet (Public Subnet AZ1) 
+* Availability zone: US-East-1B subnet (Public Subnet AZ2) 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/alb0.PNG?raw=true)
+
+* Security group: ALB SG 
+* Listener and routing: 
+* Protocol: HTTP – 80 forward to: Dev-TG  
+* Finally click create load balancer. 
+ 
+
  
 
