@@ -73,3 +73,38 @@ I need to create a Subnet association:
 * Save association 
 
 ![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ng07.PNG?raw=true)
+
+##
+
+In this section of the project, I’m going to create the security groups needed. 
+##
+
+On the AWS console go to VPC and then Security groups. 
+* Name: ALB SG 
+* Description: ALB SG 
+* VPC: Dev VPC 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/sg.PNG?raw=true)
+
+* Select add rules: 
+* Port: 80 – source: 0.0.0.0/0 
+* Port: 443 – source: 0.0.0.0/0 
+* Select create Security group. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/sg0.PNG?raw=true)
+ 
+Second security group: 
+* Name: Container SG 
+* Description: Container SG 
+* VPC: Dev VPC 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/sg1.PNG?raw=true)
+
+* Select add rules: 
+* Port: 80 – source: ALB SG 
+* Port: 443 – source: ALB SG 
+* Select create Security group. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/sg2.PNG?raw=true)
+ 
+
