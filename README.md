@@ -168,5 +168,39 @@ To create a task definition, I first go to ECR and on the left side select task 
 
 ![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/task0.PNG?raw=true)
 
+##
+You can use an Amazon ECS service to run and maintain a specified number of instances of a task definition simultaneously in an Amazon ECS cluster. If one of your tasks fails or stops, the Amazon ECS service scheduler launches another instance of your task definition to replace it.
+##
+
+To start an ECS service go to cluster on ECS and then select cluster. 
+* Select services and click on create. 
+* Family: jupiter-task-definition 
+* Service name: jupiter-service 
+* Desired task: 2 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/service0.PNG?raw=true)
+
+* Networking – VPC: Dev VPC 
+* Subnets: Private App Subnet AZ1, Private App Subnet AZ2 
+* Security groups: Container SG 
+* Disabled: Public IP 
+* Load balancer: Dev-ALB 
+* Target group: Dev-TG – Protocol: HTTP 
+* Click on create 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/service0.PNG?raw=true)
+ 
+To check if the ECS service deployed work I change console to EC2.  
+* On EC2 dashboard look for load balancer and click on it. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/service1.PNG?raw=true)
+
+* Get the DNS name and input it on a new tab. 
+* The Webserver is working. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/service2.PNG?raw=true)
+ 
+
+
  
 
