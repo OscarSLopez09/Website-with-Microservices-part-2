@@ -225,6 +225,27 @@ On the AWS console look for Route 53.
 To test the record register, I open a new browser tab and copy and paste the domain: www.Richarlison017.click. The test was successful. 
 
 ![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/route531.PNG?raw=true)
+
+##
+ 
+In this section of the project, I will create an SSL certificate in AWS Certificate manager. An SSL/TLS certificate is a digital object that allows systems to verify the identity & subsequently establish an encrypted network connection to another system using the Secure Sockets Layer/Transport Layer Security (SSL/TLS) protocol. This is also known as encryption in transit. 
+##
+
+On the AWS console type certificate manager, then select request certificate. On the certificate type select – Request a public certificate and click next. 
+
+ ![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ssl.PNG?raw=true)
+ 
+Configure settings: 
+* Domain names – Fully qualify domain name: richarlison017.click. 
+* Validate method: DNS validation 
+* Scroll down and select Request. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ssl0.PNG?raw=true)
+
+Now I need to validate our domain name with Route 53, this is done by clicking on create records in Route 53. 
+* Select the domain name (richarlison017.click) and click Create records. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ssl1.PNG?raw=true)
  
 
  
