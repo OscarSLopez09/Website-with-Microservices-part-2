@@ -228,7 +228,7 @@ To test the record register, I open a new browser tab and copy and paste the dom
 
 ##
  
-In this section of the project, I will create an SSL certificate in AWS Certificate manager. An SSL/TLS certificate is a digital object that allows systems to verify the identity & subsequently establish an encrypted network connection to another system using the Secure Sockets Layer/Transport Layer Security (SSL/TLS) protocol. This is also known as encryption in transit. 
+In this section of the project, I will create an SSL certificate in AWS Certificate manager.
 ##
 
 On the AWS console type certificate manager, then select request certificate. On the certificate type select – Request a public certificate and click next. 
