@@ -199,6 +199,34 @@ To check if the ECS service deployed work I change console to EC2.
 * The Webserver is working. 
 
 ![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/service2.PNG?raw=true)
+
+##
+In this section of the project, I’m going to create a record set on Route 53. 
+
+##
+On the AWS console look for Route 53. 
+* Route 53 dashboard select: DNS management 1 hosted zone. 
+* Select hosted zone (Richarlison017.click) 
+* The hosted zone details page will be displayed and click on create. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/route53.PNG?raw=true)
+
+* Configuration settings: 
+* Record name: www 
+* Record Type: A – Route traffic to an IPv4 address and some AWS resources. 
+* Select Alias record 
+* Route traffic to: Alias to Application and Classic load balancer 
+* Choose a region: US-East-North Virginia 
+* Choose Load balancer:  dualstack.Dev-ALB-528652584.us-east-1.elb.amazonaws.com 
+* Finally click on create records. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/route530.PNG?raw=true)
+ 
+To test the record register, I open a new browser tab and copy and paste the domain: www.Richarlison017.click. The test was successful. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/route531.PNG?raw=true)
+ 
+
  
 
 
