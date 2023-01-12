@@ -246,6 +246,45 @@ Now I need to validate our domain name with Route 53, this is done by clicking o
 * Select the domain name (richarlison017.click) and click Create records. 
 
 ![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/ssl1.PNG?raw=true)
+
+##
+In this section of the project, I will use the SSL certificate to secure all communications to the website. A listener is the process that checks for connection request. A listener is defined when creating load balancer and you can add listeners to the load balancer at any time. 
+##
+
+ 
+On the AWS console look for EC2, then on the left side of the dashboard look for load balancer. 
+*  on the load balancer (Dev-ALB) look for the listener section and select add listener. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/https.PNG?raw=true)
+ 
+* On the listener details change the protocols: HTTPS – 443. 
+* Default actions, select: Forward to – Dev-TG. 
+* Scroll down to Default SSL/TLS certificate – From ACM select (richarlison017.click) certificate. 
+* Click the add button. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/https0.PNG?raw=true)
+ 
+Scroll down to Default SSL/TLS certificate – From ACM select (richarlison017.click) certificate. 
+Click the add button. 
+ 
+* Click on listener and select – HTTP: 80. 
+* Action menu select – Edit listener. 
+* Go down to default actions – select redirect change the port: HTTPS: 443. 
+* Click on Save changes. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/https1.PNG?raw=true)
+ 
+ Now, I need to test the HTTPS.  Open a new tab and input the domain name: HTTPS://www.richarlison017.click. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/https2.PNG?raw=true)
+
+
+ 
+ 
+ 
+
+ 
+
  
 
  
