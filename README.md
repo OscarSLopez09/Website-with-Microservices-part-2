@@ -148,5 +148,25 @@ On the AWS console go to ECS and on the left side select cluster.
 * Select create cluster.
 
 ![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/cluster0.PNG?raw=true)
+
+##
+After creating the ECS cluster the next thing I need to do is create a task definition. The task definition is required to run Docker containers in Amazon ECS. You can define multiple containers in a task definition. 
+##
+ 
+To create a task definition, I first go to ECR and on the left side select task definitions. 
+* Select create new task definition. 
+* Task definition family: jupiter-task-definition 
+* Name: jupiter and input the image URI 
+* Click next 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/task.PNG?raw=true)
+
+* App environment: AWS Fargate (Serverless) 
+* Operating system: Linux/X86_64 
+* CPU: .25 vCPU Memory: .5 GB 
+* Scroll down and click next, then select create task. 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/task0.PNG?raw=true)
+
  
 
