@@ -130,7 +130,23 @@ To create a load balancer, go to the EC2 Dashboard and on the left side look for
 * Listener and routing: 
 * Protocol: HTTP – 80 forward to: Dev-TG  
 * Finally click create load balancer. 
- 
 
+##
+
+We have pushed the container image to ECR repository. We’re ready to run the ECS fargate containers. To run the fargate container I need to create an ECS cluster.
+
+## 
+ 
+On the AWS console go to ECS and on the left side select cluster. 
+* Cluster name: jupiter-cluster 
+* VPC: Dev VPC 
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/cluster.PNG?raw=true)
+
+* Subnets: Private App Subnet AZ1, Private App Subnet AZ2 
+* Infrastructure: AWS Fargate (Serverless) 
+* Select create cluster.
+
+![](https://github.com/OscarSLopez09/Website-with-Microservices-part-2/blob/main/Images/cluster0.PNG?raw=true)
  
 
